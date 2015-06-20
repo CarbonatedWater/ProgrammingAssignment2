@@ -5,11 +5,13 @@
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
+  # Set is a function that changes the vector.
   set <- function(y) {
     x <<- y
     i <<- NULL
   }
   get <- function() x
+  # Setmatrix is a function to store matrix into i
   setmatrix <- function(solve) i <<- solve
   getmatrix <- function() i
   list(set = set, get = get, setmatrix = setmatrix, getmatrix = getmatrix) 
